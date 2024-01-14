@@ -7,7 +7,7 @@ import {getServerSession} from "next-auth";
 import uniqid from 'uniqid';
 
 
-export async function createBoard(name: string) : Promise<boolean | RoomInfo> {
+export async function createBoard(name: string) : Promise<false | RoomInfo> {
   const liveblocksClient = new Liveblocks({
     secret: process.env.LIVEBLOCKS_SECRET_KEY || '',
   });
