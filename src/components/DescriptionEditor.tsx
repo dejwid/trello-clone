@@ -20,10 +20,6 @@ export default function DescriptionEditor({doc,provider,cardId}:EditorProps) {
 
   const userInfo = useSelf(me => me.info);
 
-  if (!userInfo) {
-    return;
-  }
-
   const editor = useEditor({
     extensions: [
       StarterKit.configure({
@@ -39,7 +35,7 @@ export default function DescriptionEditor({doc,provider,cardId}:EditorProps) {
       }),
       CollaborationCursor.configure({
         provider,
-        user: userInfo,
+        user: userInfo || undefined,
       }),
       Underline.configure(),
     ],
