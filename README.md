@@ -1,4 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+
 Written in typescript and uses [Mongo Atlas](https://www.mongodb.com/atlas/database) and [Liveblocks](https://liveblocks.io/)
 
 ## Getting Started
