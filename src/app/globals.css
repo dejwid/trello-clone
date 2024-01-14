@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: #f6f7fb;
+}
+
+button[type="submit"],
+button.primary,
+.btn{
+    @apply bg-gray-200 text-gray-900 py-2 px-4 border border-gray-200 rounded-md;
+}
+button[type="submit"],
+.primary{
+    @apply bg-blue-500 border-blue-500 text-white;
+}
+input[type="text"]{
+    @apply w-full block rounded-md;
+}
+button.btn.red{
+    @apply bg-red-500 text-white;
+}
+.btn.with-icon,
+button.with-icon{
+    @apply flex gap-2 items-center justify-center;
+}
+
+
+
+.collaboration-cursor__caret {
+    border-left: 1px solid #0d0d0d;
+    border-right: 1px solid #0d0d0d;
+    margin-left: -1px;
+    margin-right: -1px;
+    pointer-events: none;
+    position: relative;
+    word-break: normal;
+}
+
+.collaboration-cursor__label {
+    font-style: normal;
+    font-weight: 600;
+    left: -1px;
+    line-height: normal;
+    position: absolute;
+    user-select: none;
+    white-space: nowrap;
+    font-size: 14px;
+    color: #fff;
+    top: -1.4em;
+    border-radius: 6px;
+    border-bottom-left-radius: 0;
+    padding: 2px 6px;
+    pointer-events: none;
+}
+
+.editor-buttons{
+    button{
+        @apply border rounded-md py-1 px-2 text-sm text-gray-700;
+    }
+    button.active{
+        @apply bg-gray-200 text-gray-900;
+    }
+}
+
+.tiptap{
+    @apply p-2 border rounded-md;
+    &:focus-visible{
+        outline:0;
+        @apply border-blue-500;
+    }
+    h2{
+        @apply text-2xl;
+    }
+}
+
+.lb-portal{
+    z-index: 30;
+}
